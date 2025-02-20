@@ -1,0 +1,19 @@
+/* Ensure full-height viewport */
+body {
+    background-color: #f5e8e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Center the login component */
+app-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
