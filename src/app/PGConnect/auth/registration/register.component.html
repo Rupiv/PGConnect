@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div class="container">
+    <h2 class="heading">Need a stay?</h2>
+    <p class="sub-text">Provide a few details, we'll get the best stay for you.</p>
+
+    <form>
+        <div class="mb-2">
+            <input type="text" class="form-control" placeholder="FULL NAME" required>
+        </div>
+        <div class="mb-2">
+            <input type="email" class="form-control" placeholder="EMAIL" required>
+        </div>
+        <div class="mb-2 position-relative">
+            <input type="password" class="form-control" id="password" placeholder="PASSWORD" required>
+            <span class="eye-icon" onclick="togglePassword('password')">👁️</span>
+        </div>
+        <div class="mb-2 position-relative">
+            <input type="password" class="form-control" id="confirm-password" placeholder="CONFIRM PASSWORD" required>
+            <span class="eye-icon" onclick="togglePassword('confirm-password')">👁️</span>
+        </div>
+        <div class="mb-2">
+            <input type="text" class="form-control" placeholder="REFERRAL CODE">
+        </div>
+        <div class="mb-2">
+            <input type="text" class="form-control" placeholder="ENTER OTP" required>
+        </div>
+        <div class="resend-link">
+            <small>Didn’t receive OTP? <a href="#" class="text-success">Resend?</a></small>
+        </div>
+        <button type="submit" class="register-btn mt-3">REGISTER</button>
+    </form>
+
+    <p class="login-link">ALREADY A USER? <a href="#" class="text-primary">LOGIN</a></p>
+</div>
