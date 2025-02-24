@@ -1,4 +1,4 @@
-<app-login>
-
-</app-login>
-<app-register></app-register>
+<ng-container *ngIf="!isSignupPage">
+    <app-login></app-login>
+</ng-container>
+<router-outlet></router-outlet>
