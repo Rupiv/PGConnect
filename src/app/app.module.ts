@@ -7,12 +7,14 @@ import { RegisterComponent } from './PGConnect/auth/registration/register.compon
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PginfoComponent } from './PGConnect/pginfo/pginfo.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PginfoComponent
   ],
   imports: [
     BrowserModule,
