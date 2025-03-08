@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PginfoComponent } from './PGConnect/vendor/pginfo/pginfo.component';
 import { PgstructureinfoComponent } from './PGConnect/vendor/pgstructureinfo/pgstructureinfo.component';
+import { AmenitiesComponent } from './PGConnect/vendor/amenities/amenities.component';
+import { PgPhotoUploadComponent } from './PGConnect/vendor/pg-photo-upload/pg-photo-upload.component';
+import { PgDashboardComponent } from './PGConnect/vendor/pg-dashboard/pg-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { PgstructureinfoComponent } from './PGConnect/vendor/pgstructureinfo/pgs
     LoginComponent,
     RegisterComponent,
     PginfoComponent,
-    PgstructureinfoComponent
+    PgstructureinfoComponent,
+    AmenitiesComponent,
+    PgPhotoUploadComponent,
+    PgDashboardComponent
   ],
   imports: [
     BrowserModule,

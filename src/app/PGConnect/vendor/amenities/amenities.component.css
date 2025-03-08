@@ -6,6 +6,10 @@
     width: 90%;
     max-width: 400px;
   }
+  h2 {
+    text-align: center;
+    color: #00bfbf;
+  }
   .form-group {
     margin-bottom: 15px;
   }
@@ -21,27 +25,32 @@
     border-radius: 5px;
     outline: none;
   }
-  .sharing-group {
+  .tag-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 1px solid #00bfbf;
+    border-radius: 5px;
+    padding: 8px;
+    min-height: 50px;
+  }
+  .tag {
+    background: #ccc;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  .pricing-group {
+    display: flex;
+    align-items: center;
     gap: 5px;
     margin-bottom: 10px;
   }
-  .sharing-group input, .sharing-group select {
-    flex: 1;
-  }
-  .add-more {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
+  .currency {
     background: #00bfbf;
     color: #fff;
-    border: none;
+    padding: 8px;
     border-radius: 5px;
-    cursor: pointer;
-  }
-  .add-more:hover {
-    background: #009696;
   }
   .nav-button {
     display: flex;
