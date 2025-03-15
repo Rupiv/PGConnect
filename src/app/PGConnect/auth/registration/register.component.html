@@ -2,7 +2,8 @@
     <h2 class="heading">Need a stay?</h2>
     <p class="sub-text">Provide a few details, we'll get the best stay for you.</p>
 
-    <form #registerForm="ngForm" (ngSubmit)="onRegisterClick(registerForm)">
+    <form #registerForm="ngForm"> 
+        <!-- //(ngSubmit)="onRegisterClick(registerForm)" -->
         <div class="mb-2">
             <label class="form-label">Name</label>
             <input type="text" class="form-control" name="name" [(ngModel)]="postData.name" placeholder="FULL NAME" required>
@@ -27,12 +28,11 @@
         <div class="resend-link">
             <small>Didn’t receive OTP? <a href="#" class="text-success">Resend?</a></small>
         </div>
-        <button type="submit" class="register-btn mt-3">REGISTER</button>
+        <button type="button" class="register-btn mt-3" (click)="register_Click()">REGISTER</button>
     </form>
     <p class="login-link">ALREADY A USER? <a href="#" class="text-primary">LOGIN</a></p>
 </div>
-<app-pginfo></app-pginfo>
-<app-pgstructureinfo></app-pgstructureinfo>
+<!-- <app-pgstructureinfo></app-pgstructureinfo>
 <app-amenities></app-amenities>
 <app-pg-photo-upload></app-pg-photo-upload>
-<app-pg-dashboard></app-pg-dashboard>
+<app-pg-dashboard></app-pg-dashboard> -->
