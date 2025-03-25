@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  standalone : true,
+  imports: [FormsModule, HttpClientModule]
 })
 
 
@@ -23,6 +25,7 @@ export class RegisterComponent {
   constructor(private http: HttpClient, private router: Router){
 
   }
+  
 
   togglePassword(fieldId: string) {
     const input = document.getElementById(fieldId) as HTMLInputElement;

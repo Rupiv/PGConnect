@@ -1,16 +1,9 @@
-<ng-container *ngIf="isRegisterPage">
-    <app-register></app-register>
-</ng-container>
-<ng-container *ngIf="!isLoginPage && !isRegisterPage">
-    <app-pginfo></app-pginfo>
-</ng-container>
-<ng-container>
-    <app-login></app-login>
-</ng-container>
-<ng-container>
-    <app-pgstructureinfo></app-pgstructureinfo>
-</ng-container>
-<router-outlet></router-outlet>
+<app-login></app-login>
+<router-outlet/>
+
+
+
+
 
 
 

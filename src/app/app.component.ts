@@ -1,23 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterModule, Routes, Router } from '@angular/router';
+import { RouterModule, Routes, Router, RouterOutlet } from '@angular/router';
+import { LoginComponent } from "./PGConnect/auth/login/login.component";
+import { RegisterComponent } from './PGConnect/auth/registration/register.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [RouterOutlet, LoginComponent],
+
 })
+
 export class AppComponent {
   title = 'PGConnet';
-
-  isSignupPage: boolean = false;
-  isRegisterPage: boolean = false;
-  isLoginPage: boolean = false;
-
-  constructor(private router: Router) {
-    this.router.events.subscribe(() => {
-      this.isSignupPage = this.router.url === '/signup';
-      this.isRegisterPage = this.router.url === '/register-Click';
-      this.isLoginPage = this.router.url === '/login';
-    });
-  }
 }
