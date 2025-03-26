@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
   standalone : true,
-  imports: [FormsModule, HttpClientModule]
+  imports: [FormsModule, HttpClientModule, RouterLink]
 })
 
 
@@ -60,8 +59,8 @@ export class RegisterComponent {
   //   }
   // }
 
-  register_Click(){
-    this.router.navigate(['/register-Click']);
+  register_Click() {
+    this.router.navigate(['/Pginfo']); // Change '/Register' to your actual route path
   }
 
 }
