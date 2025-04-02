@@ -36,5 +36,8 @@
       <label><input type="radio" name="pg_status" /> Newly started PG</label>
       <label><input type="radio" name="pg_status" /> Existing PG</label>
     </div>
-    <button type="button" class="submit-btn" (click)="pgInFoNext_Click()">Next</button>
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+      <button type="button" class="submit-btn" (click)="pgInFoBack_Click()">Back</button>
+      <button type="button" class="submit-btn" (click)="pgInFoNext_Click()">Next</button>
+    </div>    
   </div>

@@ -19,4 +19,8 @@ export class PgstructureinfoComponent {
     this.router.navigate(['/Amenities']);
   }
 
+  pgStruBack_Click(){
+    this.router.navigate(['/Pginfo']);
+  }
+
 }

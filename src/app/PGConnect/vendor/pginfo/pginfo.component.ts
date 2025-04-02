@@ -19,4 +19,8 @@ export class PginfoComponent {
     this.router.navigate(['/PgStructureInfo']);
   }
 
+  pgInFoBack_Click(){
+    this.router.navigate(['/Register']);
+  }
+
 }

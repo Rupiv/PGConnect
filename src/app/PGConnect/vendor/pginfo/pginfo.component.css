@@ -53,11 +53,11 @@ body {
     border: none;
     font-family: Montserrat;
     padding: 12px;
-    width: 100%;
+    width: 25%;
     border-radius: 18px;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
   }
   .submit-btn:hover {
