@@ -42,7 +42,8 @@
       <input type="text" placeholder="400">
       <span class="currency">₹</span>
     </div>
-    <div class="nav-button">
-      <button type="button" (click)="amenitiesNext_Click()">&#10132;</button>
-    </div>
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+      <button type="button" class="submit-btn" (click)="pgAmenitiesBack_Click()">&#x2190;</button>
+      <button type="button" class="submit-btn" (click)="pgAmenitiesNext_Click()">&#x2192;</button>
+    </div>  
   </div>

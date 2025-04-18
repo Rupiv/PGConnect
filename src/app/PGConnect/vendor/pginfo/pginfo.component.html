@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <h2>PG Registration</h2>
     <div class="mb-4">
       <label>PG Name</label>
@@ -40,4 +40,60 @@
       <button type="button" class="submit-btn" (click)="pgInFoBack_Click()">Back</button>
       <button type="button" class="submit-btn" (click)="pgInFoNext_Click()">Next</button>
     </div>    
-  </div>
+  </div> -->
+
+  <div class="d-flex justify-content-center flex-column ">
+    <div>
+        <div class=" d-flex justify-content-center flex-row col-12 col-lg-12 col-md-12">
+            <div class="heading">
+                <h1>PG Information</h1>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="col-12 col-lg-12 col-md-12">
+                <form>
+                    <label for="pg-name">PG Name</label>
+                    <input type="text" id="pg-name" placeholder="Enter PG Name" required>
+
+                    <label for="pg-address">PG Address</label>
+                    <textarea id="pg-address" placeholder="Enter PG Address" required></textarea>
+
+                    <label for="location">Location</label>
+                    <input type="text" id="location"
+                        value="VJPQ+RWP, Kudlu Gate, Industrial Layout, Begur, Bengaluru, Karnataka 560068"
+                        readonly>
+
+                    <label for="phone-number">Primary Phone Number</label>
+                    <input type="tel" id="phone-number" placeholder="Enter Phone Number" required>
+
+                    <label for="pg-type">PG Type</label>
+                    <select id="pg-type" required>
+                        <option value="Gents">Gents</option>
+                        <option value="Ladies">Ladies</option>
+                        <option value="Co-living">Co-living</option>
+                    </select>
+
+                    <label for="availability">Short Stays Availability?</label>
+                    <select id="availability" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label>PG Status</label>
+                    <div class="radio-group row">
+                        <input type="radio" id="new" name="pg-status" value="Newly Started" required>
+                        <label for="new" class="newly_started_pg">Newly Started PG</label>
+                        <input type="radio" id="existing" name="pg-status" value="Existing">
+                        <label for="existing">Existing PG</label>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+              <button type="button" class="submit-btn" (click)="pgInFoBack_Click()">Back</button>
+              <button type="button" class="submit-btn" (click)="pgInFoNext_Click()">Next</button>
+            </div> 
+        </div>
+    </div>
+</div>

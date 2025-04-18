@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

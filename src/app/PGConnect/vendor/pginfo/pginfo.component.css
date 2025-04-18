@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -84,4 +84,142 @@ body {
       flex-direction: column;
       align-items: center;
     }
-  }
+  } */
+
+  * {
+    box-sizing: border-box;
+    margin: 5px, 25px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+h1{
+    
+    align-items: center;
+    color: #00989b;
+    margin-left: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+textarea {
+    resize: none;
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00989b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.newly_started_pg{
+    font-size: 10px; 
+
+}
+
+
+/* Continue Buttons */
+.button-container {
+    text-align: center;
+
+}
+
+.continue-button {
+    background-color: #00989b;
+    border-radius: 25px;
+    padding: 8px 25px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    
+
+    
+}
+.continue-button:hover {
+    background-color: #00989b;
+}
+
+/* Anchor inside Button */
+.button-a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #00989b;
+}
+.button-a:hover{
+    color: #fff ;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+continue_button {
+    
+    color: #ffffff;
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: #00989b;
+    margin-right: 20px;
+    padding: 2px 10px;
+    font-size: 14px;
+    border-color: transparent;
+}
+button_container{ 
+  
+    max-width: 400px;  
+    display: flex; 
+    justify-content: space-between;    
+}
+button_a {
+    color: #ffffff;
+}
+
+
+
+
+

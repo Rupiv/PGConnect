@@ -16,8 +16,12 @@ export class AmenitiesComponent {
   }
 
 
-  amenitiesNext_Click(){
+  pgAmenitiesNext_Click(){
     this.router.navigate(['/DetailsUpload']);
+  }
+
+  pgAmenitiesBack_Click(){
+    this.router.navigate(['/pgInfo']);
   }
 
 }
