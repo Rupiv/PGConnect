@@ -2,37 +2,61 @@
     <h2 class="heading">Register Below</h2>
     <p class="sub-text">Provide a few details about your PG</p>
 
-    <form #registerForm="ngForm"> 
-        <!-- //(ngSubmit)="onRegisterClick(registerForm)" -->
+    <form #registerForm="ngForm" (ngSubmit)="register_Click(registerForm)">
         <div class="mb-2">
             <label class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" [(ngModel)]="postData.name" placeholder="FULL NAME" required>
+            <input type="text" class="form-control" name="name" 
+            [(ngModel)]="postData.name" placeholder="Full name" required 
+            #name="ngModel"
+            #nameInput>
+            <div class="text-danger mt-1" *ngIf="name.invalid && name.touched">
+                Name is required.
+            </div>
         </div>
         <div class="mb-2">
-            <label class="form-label">Phone Number</label>
-            <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="postData.email" placeholder="Phone Number" required>
+            <label class="form-label">Phone number</label>
+            <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="postData.phone" placeholder="Phone number" required>
         </div>
         <div class="mb-2">
             <label class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" [(ngModel)]="postData.email" placeholder="EMAIL" required>
+            <input type="email" class="form-control" name="email" [(ngModel)]="postData.email" placeholder="Email" required>
         </div>
         <div class="mb-2 position-relative">
             <label class="form-label">Password</label>
-            <input type="password" class="form-control" name="password" [(ngModel)]="postData.password" id="password" placeholder="PASSWORD" required>
-            <span class="eye-icon" (click)="togglePassword('password')">👁</span>
+            <input type="password" class="form-control" name="password" [(ngModel)]="postData.password" id="password" placeholder="Password" required>
         </div>
         <div class="mb-2">
-            <label class="form-label">Referral Code</label>
-            <input type="text" class="form-control" name="referalCode" [(ngModel)]="postData.referalCode" placeholder="REFERRAL CODE">
+            <label class="form-label">Referral code</label>
+            <input type="text" class="form-control" name="referalCode" [(ngModel)]="postData.referalCode" placeholder="Referral code">
         </div>
-        <!-- <div class="mb-2">
-            <label class="form-label">Enter OTP</label>
-            <input type="text" class="form-control" name="otp" [(ngModel)]="postData.otp" placeholder="ENTER OTP" required>
-        </div> -->
-        <!-- <div class="resend-link">
-            <small>Didn’t receive OTP? <a href="#" class="text-success">Resend?</a></small>
-        </div> -->
-        <button type="button" class="register-btn mt-3" (click)="register_Click()">REGISTER</button>
+        <button type="submit" class="register-btn mt-3" (click)="register_Click(registerForm)">REGISTER</button>
     </form>
     <p class="login-link">ALREADY A USER? <a routerLink="/Login" class="text-primary">LOGIN</a></p>
 </div>
+
+
+<!-- Otp Code -->
+<div class="modal fade" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="otpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content p-3">
+        <div class="modal-header">
+            <h5 class="modal-title" id="otpModalLabel">OTP Verification</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeOtpModal()">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Please enter the OTP sent to your {{ phone }}/ {{ email }}:</p>
+            <div class="otp-input-container d-flex gap-2">
+                <input type="text" maxlength="1" class="form-control text-center"
+                    #otpInput />
+            </div>
+            <div *ngIf="otpError" class="text-danger mt-2">{{ otpError }}</div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Verify</button>
+        </div>
+        </div>
+    </div>
+</div>
+  
